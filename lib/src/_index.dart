@@ -2,4 +2,4 @@
 // End user is granted a non-exclusive non-transferable license the ("License")
 // to use GM Consult's proprietary software (the "Software").
 
-export 'text_index/_index.dart';
+export 'json_text_index/_index.dart';

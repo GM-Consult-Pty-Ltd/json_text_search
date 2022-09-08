@@ -34,6 +34,14 @@ class IndexEntry implements IIndexEntry {
   /// collection.
   const IndexEntry(this.term, this.references);
 
+  /// Adds the [reference] to the [references]. If an entry with key
+  /// [reference.id] already exists in [references] it is overwritten.
+  IndexEntry addReference(IndexReference reference) {
+    final references = Map<String, IndexReference>.from(this.references);
+    references[reference.id] = reference;
+    return IndexEntry(term, references);
+  }
+
   @override
   final String term;
 
