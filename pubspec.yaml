@@ -1,0 +1,23 @@
+# BSD 3-Clause License
+# Copyright (c) 2022, GM Consult Pty Ltd
+# All rights reserved.
+
+name: json_text_search
+description: A Dart full-text search (FTS) library that allows creation of inverted indexes on JSON collections and FTS querying of the same index.
+version: 0.0.1
+repository: https://github.com/GM-Consult-Pty-Ltd/json_text_search
+homepage: https://github.com/GM-Consult-Pty-Ltd
+issue_tracker: https://github.com/GM-Consult-Pty-Ltd/json_text_search/issues
+
+environment:
+  sdk: '>=2.17.6 <3.0.0'
+
+dependencies:
+  # -----PubDev Packages (in alphabetic order) -----
+  porter_2_stemmer: ^0.0.11
+  text_analysis: ^0.0.3
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.1
+
