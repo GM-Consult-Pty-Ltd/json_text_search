@@ -6,4 +6,4 @@ All rights reserved.
 
 ## 0.0.1-beta.1
 
-- Initial version.
+- Initial pre-release version.

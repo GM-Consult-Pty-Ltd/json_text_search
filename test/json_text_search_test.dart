@@ -2,10 +2,10 @@ import 'package:json_text_search/json_text_search.dart';
 import 'package:json_text_search/src/json_text_index/json_index_builder.dart';
 import 'package:test/test.dart';
 import 'package:text_analysis/text_analysis.dart';
-import 'data/sample_news.dart';
+import 'data/sample_news_subset.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('JsonIndexBuilder', () {
     final indexedFields = <String, int>{
       'hashTags': 5,
       'name': 2,
@@ -16,7 +16,7 @@ void main() {
       // Additional setup goes here.
     });
 
-    test('First Test', () async {
+    test('JsonIndexBuilder.index', () async {
       final index = await indexer.index(sampleNews);
       print(index.keys);
     });

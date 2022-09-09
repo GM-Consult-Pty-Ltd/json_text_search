@@ -148,6 +148,20 @@ a hashmap of document id to <code>IndexReference</code>.
       id="instance-methods">
     <h2>Methods</h2>
     <dl class="callables">
+        <dt id="addReference" class="callable">
+  <span class="name"><a href="../json_text_search/IndexEntry/addReference.html">addReference</a></span><span class="signature">(<wbr><span class="parameter" id="addReference-param-reference"><span class="type-annotation"><a href="../json_text_search/IndexReference-class.html">IndexReference</a></span> <span class="parameter-name">reference</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds the <code>reference</code> to the <a href="../json_text_search/IndexEntry/references.html">references</a>. If <a href="../json_text_search/IndexReference/id.html">IndexReference.id</a> already
+exists in <a href="../json_text_search/IndexEntry/references.html">references</a> it is overwritten.
+  
+
+</dd>
+
         <dt id="noSuchMethod" class="callable inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
@@ -236,9 +250,15 @@ descending order of relevance.
     <ol>
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#classes">Classes</a></li>
   <li><a href="../json_text_search/IIndexEntry-class.html">IIndexEntry</a></li>
+  <li><a href="../json_text_search/IIndexReference-class.html">IIndexReference</a></li>
   <li><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></li>
   <li><a href="../json_text_search/IndexReference-class.html">IndexReference</a></li>
+  <li><a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></li>
+  <li><a href="../json_text_search/TermLocation-class.html">TermLocation</a></li>
 
+  <li class="section-title"><a href="../json_text_search/json_text_search-library.html#extensions">Extensions</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
 
 
 
@@ -246,8 +266,9 @@ descending order of relevance.
 
 
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#typedefs">Typedefs</a></li>
-  <li><a href="../json_text_search/FieldRelevance.html">FieldRelevance</a></li>
+  <li><a href="../json_text_search/FieldPriority.html">FieldPriority</a></li>
   <li><a href="../json_text_search/IndexReferenceCollection.html">IndexReferenceCollection</a></li>
+  <li><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></li>
   <li><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></li>
 
 </ol>
@@ -270,6 +291,7 @@ descending order of relevance.
     <li><a href="../json_text_search/IndexEntry/term.html">term</a></li>
 
     <li class="section-title"><a href="../json_text_search/IndexEntry-class.html#instance-methods">Methods</a></li>
+    <li><a href="../json_text_search/IndexEntry/addReference.html">addReference</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../json_text_search/IndexEntry/rankedReferences.html">rankedReferences</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
@@ -289,7 +311,7 @@ descending order of relevance.
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1
+      0.0.1-beta.1
   </span>
 
   

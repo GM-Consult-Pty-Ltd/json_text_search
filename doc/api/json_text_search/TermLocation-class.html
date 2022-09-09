@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the TermLocation class from the json_text_search library, for the Dart programming language.">
+  <title>TermLocation class - json_text_search library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">json_text_search</a></li>
+    <li><a href="../json_text_search/json_text_search-library.html">json_text_search</a></li>
+    <li class="self-crumb">TermLocation class</li>
+  </ol>
+  <div class="self-name">TermLocation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">TermLocation</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An object describing the location of a term in a JSON document.</p>
+<ul>
+<li><a href="../json_text_search/TermLocation/term.html">term</a> is the term/word associated with the <a href="../json_text_search/TermLocation-class.html">TermLocation</a>.</li>
+<li>the <a href="../json_text_search/TermLocation/field.html">field</a> is the name of the field in which the term occurs;</li>
+<li><a href="../json_text_search/TermLocation/priority.html">priority</a> is the relevance priority of the <a href="../json_text_search/TermLocation/field.html">field</a>, with 0 having
+highest priority; and</li>
+<li>the <a href="../json_text_search/TermLocation/position.html">position</a> is the zero-based location of the start of the term from
+the start of the text in the field.</li>
+</ul>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="TermLocation" class="callable">
+          <span class="name"><a href="../json_text_search/TermLocation/TermLocation.html">TermLocation</a></span><span class="signature">(<span class="parameter" id="-param-term"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">term</span>, </span><span class="parameter" id="-param-field"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">field</span>, </span><span class="parameter" id="-param-priority"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">priority</span>, </span><span class="parameter" id="-param-position"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">position</span></span>)</span>
+        </dt>
+        <dd>
+          Instantiates a const <a href="../json_text_search/TermLocation-class.html">TermLocation</a> instance:
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="field" class="property">
+  <span class="name"><a href="../json_text_search/TermLocation/field.html">field</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The name of the field in which the term occurs
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../json_text_search/TermLocation/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features">read-only, override</div>
+
+</dd>
+
+        <dt id="position" class="property">
+  <span class="name"><a href="../json_text_search/TermLocation/position.html">position</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The position of the term from the end of the source text
+as a fraction of the source text length.
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="priority" class="property">
+  <span class="name"><a href="../json_text_search/TermLocation/priority.html">priority</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The priority of the <a href="../json_text_search/TermLocation/field.html">field</a>.
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="term" class="property">
+  <span class="name"><a href="../json_text_search/TermLocation/term.html">term</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The term/word associated with the <a href="../json_text_search/TermLocation-class.html">TermLocation</a>.
+  <div class="features">final</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features">inherited</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../json_text_search/TermLocation/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features">override</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">json_text_search</a></li>
+  <li><a href="../json_text_search/json_text_search-library.html">json_text_search</a></li>
+  <li class="self-crumb">TermLocation class</li>
+</ol>
+
+
+    <h5>json_text_search library</h5>
+    <ol>
+  <li class="section-title"><a href="../json_text_search/json_text_search-library.html#classes">Classes</a></li>
+  <li><a href="../json_text_search/IIndexEntry-class.html">IIndexEntry</a></li>
+  <li><a href="../json_text_search/IIndexReference-class.html">IIndexReference</a></li>
+  <li><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></li>
+  <li><a href="../json_text_search/IndexReference-class.html">IndexReference</a></li>
+  <li><a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></li>
+  <li><a href="../json_text_search/TermLocation-class.html">TermLocation</a></li>
+
+  <li class="section-title"><a href="../json_text_search/json_text_search-library.html#extensions">Extensions</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
+
+
+
+
+
+
+  <li class="section-title"><a href="../json_text_search/json_text_search-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../json_text_search/FieldPriority.html">FieldPriority</a></li>
+  <li><a href="../json_text_search/IndexReferenceCollection.html">IndexReferenceCollection</a></li>
+  <li><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></li>
+  <li><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></li>
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../json_text_search/TermLocation-class.html#constructors">Constructors</a></li>
+          <li><a href="../json_text_search/TermLocation/TermLocation.html">TermLocation</a></li>
+
+
+    <li class="section-title">
+      <a href="../json_text_search/TermLocation-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../json_text_search/TermLocation/field.html">field</a></li>
+    <li><a href="../json_text_search/TermLocation/hashCode.html">hashCode</a></li>
+    <li><a href="../json_text_search/TermLocation/position.html">position</a></li>
+    <li><a href="../json_text_search/TermLocation/priority.html">priority</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li><a href="../json_text_search/TermLocation/term.html">term</a></li>
+
+    <li class="section-title inherited"><a href="../json_text_search/TermLocation-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title"><a href="../json_text_search/TermLocation-class.html#operators">Operators</a></li>
+    <li><a href="../json_text_search/TermLocation/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    json_text_search
+      0.0.1-beta.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

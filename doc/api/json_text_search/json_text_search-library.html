@@ -67,6 +67,14 @@ indexes on JSON collections and FTS querying of the same index.</p>
   Enumerates the properties of an entry in an inverted text index.
 </dd>
 
+        <dt id="IIndexReference">
+  <span class="name "><a href="../json_text_search/IIndexReference-class.html">IIndexReference</a></span> 
+
+</dt>
+<dd>
+  Enumerates the properties of a document reference in an inverted text index.
+</dd>
+
         <dt id="IndexEntry">
   <span class="name "><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></span> 
 
@@ -80,13 +88,53 @@ indexes on JSON collections and FTS querying of the same index.</p>
 
 </dt>
 <dd>
-  Enumerates the properties of a document reference in an inverted text index.
+  Implementation of <a href="../json_text_search/IIndexReference-class.html">IIndexReference</a>.
+</dd>
+
+        <dt id="JsonIndexBuilder">
+  <span class="name "><a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></span> 
+
+</dt>
+<dd>
+  Provides indexing methods for a collection of JSON documents.
+</dd>
+
+        <dt id="TermLocation">
+  <span class="name "><a href="../json_text_search/TermLocation-class.html">TermLocation</a></span> 
+
+</dt>
+<dd>
+  An object describing the location of a term in a JSON document.
 </dd>
 
       </dl>
     </section>
 
 
+    <section class="summary offset-anchor" id="extensions">
+      <h2>Extensions</h2>
+
+      <dl>
+        <dt id="JsonTextIndexTermLocationCollectionExtension">
+    <span class="name "><a href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></span> 
+
+</dt>
+<dd>
+    Extension methods on a collection of <a href="../json_text_search/TermLocation-class.html">TermLocation</a>.
+</dd>
+
+
+        <dt id="JsonTextIndexTokenCollectionExtension">
+    <span class="name "><a href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></span> 
+
+</dt>
+<dd>
+    Extension methods on a collection of <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a>.
+</dd>
+
+
+      </dl>
+    </section>
 
 
 
@@ -97,16 +145,15 @@ indexes on JSON collections and FTS querying of the same index.</p>
 
       <dl>
           
-  <dt id="FieldRelevance" class="">
-  <span class="name"><a href="../json_text_search/FieldRelevance.html">FieldRelevance</a></span>
-    = <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>&gt;</span>
+  <dt id="FieldPriority" class="">
+  <span class="name"><a href="../json_text_search/FieldPriority.html">FieldPriority</a></span>
+    = <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span>
   </span>
   
 
 </dt>
 <dd>
-  A type definition mapping the fields in a JSON document to relevance
-weights.
+  A type definition mapping the fields in a JSON document to priority:
   
 
 </dd>
@@ -129,16 +176,32 @@ values, represented as a hashmap of document id to <a href="../json_text_search/
 
 
           
+  <dt id="JsonTextIndex" class="">
+  <span class="name"><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></span>
+    = <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></span>&gt;</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Type definition for a hashmap of term to <a href="../json_text_search/IndexEntry-class.html">IndexEntry</a>.
+  
+
+</dd>
+
+
+          
   <dt id="RelevanceBuilder" class="callable">
     <span class="name"><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></span><span class="signature">
-      <span class="returntype parameter">= <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a> Function<span class="signature">(<span class="parameter" id="param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span>)</span></span>
+      <span class="returntype parameter">= <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a> Function<span class="signature">(<span class="parameter" id="param-termInstances"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../json_text_search/TermLocation-class.html">TermLocation</a></span>&gt;</span></span> <span class="parameter-name">termInstances</span></span>)</span></span>
     </span>
     
 
   </dt>
   <dd>
-    A builder function that calculates the relevance of a JSON document to a
-search term.
+    Type definition of a function that calculates relevance from a collection
+of <a href="../json_text_search/TermLocation-class.html">TermLocation</a> by applying an algorithm that weights the field priority,
+position in the field and number of instances of the term.
     
 
   </dd>
@@ -175,9 +238,15 @@ search term.
     <ol>
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#classes">Classes</a></li>
   <li><a href="../json_text_search/IIndexEntry-class.html">IIndexEntry</a></li>
+  <li><a href="../json_text_search/IIndexReference-class.html">IIndexReference</a></li>
   <li><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></li>
   <li><a href="../json_text_search/IndexReference-class.html">IndexReference</a></li>
+  <li><a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></li>
+  <li><a href="../json_text_search/TermLocation-class.html">TermLocation</a></li>
 
+  <li class="section-title"><a href="../json_text_search/json_text_search-library.html#extensions">Extensions</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
 
 
 
@@ -185,8 +254,9 @@ search term.
 
 
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#typedefs">Typedefs</a></li>
-  <li><a href="../json_text_search/FieldRelevance.html">FieldRelevance</a></li>
+  <li><a href="../json_text_search/FieldPriority.html">FieldPriority</a></li>
   <li><a href="../json_text_search/IndexReferenceCollection.html">IndexReferenceCollection</a></li>
+  <li><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></li>
   <li><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></li>
 
 </ol>
@@ -198,7 +268,7 @@ search term.
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1
+      0.0.1-beta.1
   </span>
 
   

@@ -51,15 +51,19 @@ All rights reserved.
 -->
 <h1 id="json_text_search">json_text_search</h1>
 <p>A Dart full-text search (FTS) library that allows creation of inverted indexes on JSON collections and FTS querying of the same index.</p>
+<p><em>THIS PACKAGE IS IN BETA DEVELOPMENT AND SUBJECT TO DAILY BREAKING CHANGES.</em></p>
 <h2 id="install">Install</h2>
 <p>In the <code>pubspec.yaml</code> of your flutter project, add the following dependency:</p>
 <pre class="language-yaml"><code class="language-yaml">dependencies:
-  json_text_search: ^0.0.1
+  json_text_search: ^0.0.1-beta.1
 </code></pre>
 <p>In your code file add the following import:</p>
 <pre class="language-dart"><code class="language-dart">import 'package:json_text_search/json_text_search.dart';
 </code></pre>
-<h2 id="usage">Usage</h2><!-- TODO: Usage section -->
+<h2 id="usage">Usage</h2>
+<p>This <a href="https://pub.dev/packages/json_text_search/example">simple example</a> creates an index on the <code>sampleNews</code> dataset using <code>JsonIndexBuilder.impl</code> and then finds the index entry for the term "intel".</p>
+<p>For a production indexer, inherit from <code>JsonIndexBuilder</code>, overriding the  <code>indexedFields</code>, <code>tokenizer</code> and <code>relevanceBuilder</code> fields.</p>
+<p>The <code>index</code> method and <code>tokenizer</code> callback return futures to allow the use of API calls or isolates in your implementation.</p>
 <h2 id="issues">Issues</h2>
 <p>If you find a bug please fill an <a href="https://github.com/GM-Consult-Pty-Ltd/text_analysis/issues">issue</a>.</p>
 <p>This project is a supporting package for a revenue project that has priority call on resources, so please be patient if we don't respond immediately to issues or pull requests.</p>
@@ -110,7 +114,7 @@ indexes on JSON collections and FTS querying of the same index.
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1
+      0.0.1-beta.1
   </span>
 
   

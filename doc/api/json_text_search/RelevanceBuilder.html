@@ -51,20 +51,24 @@
 
     <section class="multi-line-signature">
         <span class="name ">RelevanceBuilder</span> =
-     <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a> Function<span class="signature">(<span class="parameter" id="param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span>)</span></span>
+     <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a> Function<span class="signature">(<span class="parameter" id="param-termInstances"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../json_text_search/TermLocation-class.html">TermLocation</a></span>&gt;</span></span> <span class="parameter-name">termInstances</span></span>)</span></span>
 
     </section>
 
     
 <section class="desc markdown">
-  <p>A builder function that calculates the relevance of a JSON document to a
-search term.</p>
+  <p>Type definition of a function that calculates relevance from a collection
+of <a href="../json_text_search/TermLocation-class.html">TermLocation</a> by applying an algorithm that weights the field priority,
+position in the field and number of instances of the term.</p>
+<p>The <code>termInstances</code> collection elements must all have the same
+<a href="../json_text_search/TermLocation/term.html">TermLocation.term</a> and the term must not be empty.</p>
 </section>
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">typedef RelevanceBuilder = double Function(Map&lt;String, dynamic&gt; json);</code></pre>
+  <pre class="language-dart"><code class="language-dart">typedef RelevanceBuilder = double Function(
+    Iterable&lt;TermLocation&gt; termInstances);</code></pre>
 </section>
 
 
@@ -88,9 +92,15 @@ search term.</p>
     <ol>
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#classes">Classes</a></li>
   <li><a href="../json_text_search/IIndexEntry-class.html">IIndexEntry</a></li>
+  <li><a href="../json_text_search/IIndexReference-class.html">IIndexReference</a></li>
   <li><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></li>
   <li><a href="../json_text_search/IndexReference-class.html">IndexReference</a></li>
+  <li><a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></li>
+  <li><a href="../json_text_search/TermLocation-class.html">TermLocation</a></li>
 
+  <li class="section-title"><a href="../json_text_search/json_text_search-library.html#extensions">Extensions</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
+  <li><a href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
 
 
 
@@ -98,8 +108,9 @@ search term.</p>
 
 
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#typedefs">Typedefs</a></li>
-  <li><a href="../json_text_search/FieldRelevance.html">FieldRelevance</a></li>
+  <li><a href="../json_text_search/FieldPriority.html">FieldPriority</a></li>
   <li><a href="../json_text_search/IndexReferenceCollection.html">IndexReferenceCollection</a></li>
+  <li><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></li>
   <li><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></li>
 
 </ol>
@@ -114,7 +125,7 @@ search term.</p>
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1
+      0.0.1-beta.1
   </span>
 
   

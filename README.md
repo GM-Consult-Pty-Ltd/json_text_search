@@ -7,6 +7,8 @@ All rights reserved.
 # json_text_search
 A Dart full-text search (FTS) library that allows creation of inverted indexes on JSON collections and FTS querying of the same index.
 
+*THIS PACKAGE IS IN BETA DEVELOPMENT AND SUBJECT TO DAILY BREAKING CHANGES.*
+
 ## Install
 
 In the `pubspec.yaml` of your flutter project, add the following dependency:
@@ -24,7 +26,12 @@ import 'package:json_text_search/json_text_search.dart';
 
 ## Usage
 
-<!-- TODO: Usage section -->
+This [simple example](https://pub.dev/packages/json_text_search/example) creates an index on the `sampleNews` dataset using `JsonIndexBuilder.impl` and then finds the index entry for the term "intel".
+
+For a production indexer, inherit from `JsonIndexBuilder`, overriding the  `indexedFields`, `tokenizer` and `relevanceBuilder` fields.
+
+The `index` method and `tokenizer` callback return futures to allow the use of API calls or isolates in your implementation.
+
 
 ## Issues
 
