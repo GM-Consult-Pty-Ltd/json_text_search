@@ -4,10 +4,6 @@
 
 import 'package:json_text_search/json_text_search.dart';
 
-/// Type definition of a collection of JSON documents with their relevance
-/// values, represented as a hashmap of document id to [IndexReference].
-typedef IndexReferenceCollection = Map<String, IndexReference>;
-
 /// Enumerates the properties of an entry in an inverted text index.
 abstract class IIndexEntry {
   //
@@ -24,6 +20,15 @@ abstract class IIndexEntry {
   ///
   /// Limits the result to [limit], or all [references]  if [limit] is null.
   List<Map<String, dynamic>> rankedReferences([int? limit]);
+
+  @override
+  bool operator ==(Object other) =>
+      other is IIndexEntry &&
+      term == other.term &&
+      references == other.references;
+
+  @override
+  int get hashCode => Object.hash(term, references);
 }
 
 /// Enumerates the properties of an entry in an inverted text index.
@@ -63,6 +68,6 @@ extension _IndexReferencesExtension on Map<String, IndexReference> {
   List<Map<String, dynamic>> _rankedReferences([int? limit]) {
     final entries = List<IndexReference>.from(values);
     entries.sort((a, b) => b.relevance.compareTo(a.relevance));
-    return entries.map((e) => e.json).toList();
+    return entries.map((e) => e.document).toList();
   }
 }

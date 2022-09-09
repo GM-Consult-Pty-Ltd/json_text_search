@@ -13,7 +13,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 
 ```yaml
 dependencies:
-  json_text_search: ^0.0.1
+  json_text_search: ^0.0.1-beta.1
 ```
 
 In your code file add the following import:

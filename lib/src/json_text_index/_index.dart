@@ -4,3 +4,5 @@
 
 export 'index_entry.dart';
 export 'index_reference.dart';
+export 'json_index_builder.dart';
+export 'term_location.dart';

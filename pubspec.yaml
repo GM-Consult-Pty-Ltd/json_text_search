@@ -4,7 +4,7 @@
 
 name: json_text_search
 description: A Dart full-text search (FTS) library that allows creation of inverted indexes on JSON collections and FTS querying of the same index.
-version: 0.0.1
+version: 0.0.1-beta.1
 repository: https://github.com/GM-Consult-Pty-Ltd/json_text_search
 homepage: https://github.com/GM-Consult-Pty-Ltd
 issue_tracker: https://github.com/GM-Consult-Pty-Ltd/json_text_search/issues
@@ -15,7 +15,7 @@ environment:
 dependencies:
   # -----PubDev Packages (in alphabetic order) -----
   porter_2_stemmer: ^0.0.11
-  text_analysis: ^0.0.3
+  text_analysis: ^0.0.12
 
 dev_dependencies:
   lints: ^2.0.0

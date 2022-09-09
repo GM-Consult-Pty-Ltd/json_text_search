@@ -3,3 +3,4 @@
 // to use GM Consult's proprietary software (the "Software").
 
 export 'json_text_index/_index.dart';
+export 'typedefs.dart';
