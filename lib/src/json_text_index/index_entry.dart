@@ -2,9 +2,14 @@
 // BSD 3-Clause License
 // All rights reserved
 
+// ignore_for_file: deprecated_member_use_from_same_package
+
 import 'package:json_text_search/json_text_search.dart';
 
 /// Enumerates the properties of an entry in an inverted text index.
+@Deprecated(
+    'Interface [IIndexEntry] is no longer supported and will be removed with '
+    'the next version.')
 abstract class IIndexEntry {
   //
 
@@ -32,6 +37,9 @@ abstract class IIndexEntry {
 }
 
 /// Enumerates the properties of an entry in an inverted text index.
+@Deprecated(
+    'Class [IndexEntry] is no longer supported and will be removed with '
+    'the next version.')
 class IndexEntry implements IIndexEntry {
   //
 

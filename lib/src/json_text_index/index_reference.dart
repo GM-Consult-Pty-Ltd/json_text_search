@@ -12,6 +12,9 @@ import 'package:json_text_search/json_text_search.dart';
 ///   [document] document; and
 /// - [relevance] is a value between 0 and 1 that enumerates the index reference's relevance
 ///   to the indexed term.
+@Deprecated(
+    'Interface [IIndexReference] is no longer supported and will be removed with '
+    'the next version.')
 abstract class IIndexReference {
   //
 
@@ -56,6 +59,9 @@ abstract class IIndexReference {
 ///   [document] document; and
 /// - [relevance] is a value between 0 and 1 that enumerates the index reference's relevance
 ///   to the indexed term.
+@Deprecated(
+    'Class [IndexReference] is no longer supported and will be removed with '
+    'the next version.')
 class IndexReference implements IIndexReference {
   //
 

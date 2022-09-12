@@ -4,6 +4,12 @@ Copyright (c) 2022, GM Consult Pty Ltd
 All rights reserved. 
 -->
 
-## 0.0.1-beta.1
+### 0.0.1-beta.2
 
+- **PRE-RELEASE, BREAKING CHANGES**
+- Initial pre-release version.
+
+### 0.0.1-beta.1
+
+- **PRE-RELEASE**
 - Initial pre-release version.

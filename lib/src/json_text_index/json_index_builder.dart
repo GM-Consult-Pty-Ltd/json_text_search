@@ -2,6 +2,8 @@
 // BSD 3-Clause License
 // All rights reserved
 
+// ignore_for_file: deprecated_member_use_from_same_package
+
 import 'package:json_text_search/json_text_search.dart';
 import 'package:text_analysis/text_analysis.dart';
 import 'package:porter_2_stemmer/porter_2_stemmer.dart';
@@ -26,6 +28,10 @@ import 'package:porter_2_stemmer/porter_2_stemmer.dart';
 /// - [relevanceBuilder] is a callback that calculates relevance
 ///   from a collection of [TermLocation] (optional, defaults to
 ///   [kDefaultRelevanceBuilder]).
+
+@Deprecated(
+    'Class [JsonIndexBuilder] is no longer supported and will be removed with '
+    'the next version.')
 abstract class JsonIndexBuilder {
   //
 
@@ -165,6 +171,9 @@ class _JsonIndexerImpl extends JsonIndexBuilder {
 }
 
 /// Extension methods on a collection of [Token].
+@Deprecated(
+    'Extension [JsonTextIndexTokenCollectionExtension] is no longer supported '
+    'and will be removed with the next version')
 extension JsonTextIndexTokenCollectionExtension on Iterable<Token> {
   //
 
@@ -173,6 +182,9 @@ extension JsonTextIndexTokenCollectionExtension on Iterable<Token> {
   ///
   /// Filters the collection for [term], then maps the filtered collection to
   /// a list of [TermLocation].
+  @Deprecated(
+      ' Extension method [locations] is no longer supported and will be '
+      'removed with the next version')
   List<TermLocation> locations(
           String term, String fieldName, int fieldPriority) =>
       byTerm(term)
@@ -181,6 +193,9 @@ extension JsonTextIndexTokenCollectionExtension on Iterable<Token> {
 }
 
 /// Extension methods on a collection of [TermLocation].
+@Deprecated(
+    'Extension method [byTerm] is no longer supported and will be removed '
+    'with the next version.')
 extension JsonTextIndexTermLocationCollectionExtension
     on Iterable<TermLocation> {
   //
@@ -206,6 +221,9 @@ extension JsonTextIndexTermLocationCollectionExtension
   /// - iterate through the collection; and
   /// - add [TermLocation.priority] * (1- [TermLocation.position]) to relevance;
   /// - Return the aggregated relevance.
+  @Deprecated(
+      'Extension method [termRelevance] is no longer supported and will be '
+      'removed with the next version.')
   double get termRelevance {
     final terms = Set<String>.from(map((e) => e.term));
     // - assert that the collection is for a single term and the term is not empty;

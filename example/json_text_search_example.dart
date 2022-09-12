@@ -1,4 +1,6 @@
 /// In your code file add the following import:
+// ignore_for_file: deprecated_member_use_from_same_package
+
 import 'package:json_text_search/json_text_search.dart';
 
 /// This simple example creates an index on the [sampleNews] dataset below and

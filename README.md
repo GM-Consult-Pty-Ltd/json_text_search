@@ -5,9 +5,10 @@ All rights reserved.
 -->
 
 # json_text_search
-A Dart full-text search (FTS) library that allows creation of inverted indexes on JSON collections and FTS querying of the same index.
 
-*THIS PACKAGE IS IN BETA DEVELOPMENT AND SUBJECT TO DAILY BREAKING CHANGES.*
+A Dart full-text search (FTS) library that provides utility classes for querying an inverted positional index for a JSON collection.
+
+*THIS PACKAGE IS **PRE-RELEASE**, IN ACTIVE DEVELOPMENT AND SUBJECT TO DAILY BREAKING CHANGES.*
 
 ## Install
 
@@ -15,7 +16,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 
 ```yaml
 dependencies:
-  json_text_search: ^0.0.1-beta.1
+  json_text_search: ^0.0.1-beta.2
 ```
 
 In your code file add the following import:
@@ -26,15 +27,21 @@ import 'package:json_text_search/json_text_search.dart';
 
 ## Usage
 
-This [simple example](https://pub.dev/packages/json_text_search/example) creates an index on the `sampleNews` dataset using `JsonIndexBuilder.impl` and then finds the index entry for the term "intel".
+### Examples
 
-For a production indexer, inherit from `JsonIndexBuilder`, overriding the  `indexedFields`, `tokenizer` and `relevanceBuilder` fields.
-
-The `index` method and `tokenizer` callback return futures to allow the use of API calls or isolates in your implementation.
+[Examples](https://pub.dev/packages/json_text_search/example) are provided.
 
 
 ## Issues
 
-If you find a bug please fill an [issue](https://github.com/GM-Consult-Pty-Ltd/text_analysis/issues).  
+If you find a bug please fill an [issue](https://github.com/GM-Consult-Pty-Ltd/json_text_search/issues).  
 
 This project is a supporting package for a revenue project that has priority call on resources, so please be patient if we don't respond immediately to issues or pull requests.
+
+## References
+
+* [Manning, Raghavan and Schütze, "*Introduction to Information Retrieval*", Cambridge University Press, 2008](https://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf)
+* [University of Cambridge, 2016 "*Information Retrieval*", course notes, Dr Ronan Cummins, 2016](https://www.cl.cam.ac.uk/teaching/1516/InfoRtrv/)
+* [Wikipedia (1), "*Inverted Index*", from Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Inverted_index)
+* [Wikipedia (2), "*Lemmatisation*", from Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Lemmatisation)
+* [Wikipedia (3), "*Stemming*", from Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Stemming)

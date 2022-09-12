@@ -9,6 +9,9 @@
 ///   highest priority; and
 /// - the [position] is the zero-based location of the start of the term from
 ///   the start of the text in the field.
+@Deprecated(
+    'Class [TermLocation] is no longer supported and will be removed with '
+    'the next version.')
 class TermLocation {
   //
 
