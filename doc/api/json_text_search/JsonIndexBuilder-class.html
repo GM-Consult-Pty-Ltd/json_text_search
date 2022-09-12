@@ -31,7 +31,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">json_text_search</a></li>
     <li><a href="../json_text_search/json_text_search-library.html">json_text_search</a></li>
-    <li class="self-crumb">JsonIndexBuilder abstract class</li>
+    <li class="self-crumb"><span class="deprecated">JsonIndexBuilder</span> abstract class</li>
   </ol>
   <div class="self-name">JsonIndexBuilder</div>
   <form class="search navbar-right" role="search">
@@ -53,29 +53,47 @@
 <section class="desc markdown">
   <p>Provides indexing methods for a collection of JSON documents.</p>
 <ul>
-<li><a href="../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a> returns a collection of <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a>s from a text source;</li>
+<li><a href="../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a> returns a collection of <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a>s from a text source;</li>
 <li><a href="../json_text_search/JsonIndexBuilder/relevanceBuilder.html">relevanceBuilder</a> calculates relevance from a collection of
-<a href="../json_text_search/TermLocation-class.html">TermLocation</a>;</li>
+<a class="deprecated" href="../json_text_search/TermLocation-class.html">TermLocation</a>;</li>
 <li><a href="../json_text_search/JsonIndexBuilder/indexedFields.html">indexedFields</a> is the names of the indexed fields in the collection,
 mapped to the relative priority of each field (0 is lowest priority);</li>
 </ul>
 <p>Implementing classes should override <a href="../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a>, <a href="../json_text_search/JsonIndexBuilder/relevanceBuilder.html">relevanceBuilder</a> and
 <a href="../json_text_search/JsonIndexBuilder/indexedFields.html">indexedFields</a> to suit indexing of the target collection.</p>
 <p>The <a href="../json_text_search/JsonIndexBuilder/JsonIndexBuilder.impl.html">JsonIndexBuilder.impl</a> factory constructor returns a basic
-implementation of <a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a> with the following parameters:</p>
+implementation of <a class="deprecated" href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a> with the following parameters:</p>
 <ul>
 <li><a href="../json_text_search/JsonIndexBuilder/indexedFields.html">indexedFields</a> is the names of the indexed fields in the
 collection, mapped to the relative priority of each field
 (0 is lowest priority) (required);</li>
 <li><a href="../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a> is a callback that returns a collection of
-<a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a>s from text (optional, defaults to <a href="../json_text_search/JsonIndexBuilder/kDefaultTokenizer.html">kDefaultTokenizer</a>); and</li>
+<a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a>s from text (optional, defaults to <a href="../json_text_search/JsonIndexBuilder/kDefaultTokenizer.html">kDefaultTokenizer</a>); and</li>
 <li><a href="../json_text_search/JsonIndexBuilder/relevanceBuilder.html">relevanceBuilder</a> is a callback that calculates relevance
-from a collection of <a href="../json_text_search/TermLocation-class.html">TermLocation</a> (optional, defaults to
+from a collection of <a class="deprecated" href="../json_text_search/TermLocation-class.html">TermLocation</a> (optional, defaults to
 <a href="../json_text_search/JsonIndexBuilder/kDefaultRelevanceBuilder.html">kDefaultRelevanceBuilder</a>).</li>
 </ul>
 </section>
 
 
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Class [JsonIndexBuilder] is no longer supported and will be removed with &#39; &#39;the next version.&#39;)</li>
+    </ul>
+  </dd>
+      </dl>
+    </section>
 
     
   <section class="summary offset-anchor" id="constructors">
@@ -90,10 +108,10 @@ from a collection of <a href="../json_text_search/TermLocation-class.html">TermL
             <div class="constructor-modifier features">const</div>
         </dd>
         <dt id="JsonIndexBuilder.impl" class="callable">
-          <span class="name"><a href="../json_text_search/JsonIndexBuilder/JsonIndexBuilder.impl.html">JsonIndexBuilder.impl</a></span><span class="signature">(<span class="parameter" id="impl-param-indexedFields">{<span>required</span> <span class="type-annotation"><a href="../json_text_search/FieldPriority.html">FieldPriority</a></span> <span class="parameter-name">indexedFields</span>, </span><span class="parameter" id="impl-param-tokenizer"><span class="type-annotation"><a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Tokenizer.html">Tokenizer</a></span> <span class="parameter-name">tokenizer</span> = <span class="default-value">kDefaultTokenizer</span>, </span><span class="parameter" id="impl-param-relevanceBuilder"><span class="type-annotation"><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></span> <span class="parameter-name">relevanceBuilder</span> = <span class="default-value">kDefaultRelevanceBuilder</span>}</span>)</span>
+          <span class="name"><a href="../json_text_search/JsonIndexBuilder/JsonIndexBuilder.impl.html">JsonIndexBuilder.impl</a></span><span class="signature">(<span class="parameter" id="impl-param-indexedFields">{<span>required</span> <span class="type-annotation"><a class="deprecated" href="../json_text_search/FieldPriority.html">FieldPriority</a></span> <span class="parameter-name">indexedFields</span>, </span><span class="parameter" id="impl-param-tokenizer"><span class="type-annotation"><a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Tokenizer.html">Tokenizer</a></span> <span class="parameter-name">tokenizer</span> = <span class="default-value">kDefaultTokenizer</span>, </span><span class="parameter" id="impl-param-relevanceBuilder"><span class="type-annotation"><a class="deprecated" href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></span> <span class="parameter-name">relevanceBuilder</span> = <span class="default-value">kDefaultRelevanceBuilder</span>}</span>)</span>
         </dt>
         <dd>
-          Hydrates a basic implementation of <a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a> with:
+          Hydrates a basic implementation of <a class="deprecated" href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a> with:
             <div class="constructor-modifier features">factory</div>
         </dd>
     </dl>
@@ -116,7 +134,7 @@ from a collection of <a href="../json_text_search/TermLocation-class.html">TermL
 
         <dt id="indexedFields" class="property">
   <span class="name"><a href="../json_text_search/JsonIndexBuilder/indexedFields.html">indexedFields</a></span>
-  <span class="signature">&#8594; <a href="../json_text_search/FieldPriority.html">FieldPriority</a></span> 
+  <span class="signature">&#8594; <a class="deprecated" href="../json_text_search/FieldPriority.html">FieldPriority</a></span> 
 
 </dt>
 <dd>
@@ -128,11 +146,11 @@ relative weight of each field.
 
         <dt id="relevanceBuilder" class="property">
   <span class="name"><a href="../json_text_search/JsonIndexBuilder/relevanceBuilder.html">relevanceBuilder</a></span>
-  <span class="signature">&#8594; <a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></span> 
+  <span class="signature">&#8594; <a class="deprecated" href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></span> 
 
 </dt>
 <dd>
-  A function that calculates relevance from a collection of <a href="../json_text_search/TermLocation-class.html">TermLocation</a>
+  A function that calculates relevance from a collection of <a class="deprecated" href="../json_text_search/TermLocation-class.html">TermLocation</a>
 by applying an algorithm that weights the field priority, position in
 the field and number of instances of the term.
   <div class="features">read-only</div>
@@ -152,11 +170,11 @@ the field and number of instances of the term.
 
         <dt id="tokenizer" class="property">
   <span class="name"><a href="../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a></span>
-  <span class="signature">&#8594; <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Tokenizer.html">Tokenizer</a></span> 
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Tokenizer.html">Tokenizer</a></span> 
 
 </dt>
 <dd>
-  A function that returns a collection of <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a> from text.
+  A function that returns a collection of <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a> from text.
   <div class="features">read-only</div>
 
 </dd>
@@ -172,13 +190,13 @@ the field and number of instances of the term.
     <dl class="callables">
         <dt id="index" class="callable">
   <span class="name"><a href="../json_text_search/JsonIndexBuilder/index.html">index</a></span><span class="signature">(<wbr><span class="parameter" id="index-param-collection"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">collection</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a class="deprecated" href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  Returns a hashmap of term to <a href="../json_text_search/IndexEntry-class.html">IndexEntry</a> from the <code>collection</code>,
+  Returns a hashmap of term to <a class="deprecated" href="../json_text_search/IndexEntry-class.html">IndexEntry</a> from the <code>collection</code>,
 a hashmap of primary key to JSON document used to create the index.
   
 
@@ -239,27 +257,27 @@ a hashmap of primary key to JSON document used to create the index.
     <h2>Static Methods</h2>
     <dl class="callables">
         <dt id="kDefaultRelevanceBuilder" class="callable">
-  <span class="name"><a href="../json_text_search/JsonIndexBuilder/kDefaultRelevanceBuilder.html">kDefaultRelevanceBuilder</a></span><span class="signature">(<wbr><span class="parameter" id="kDefaultRelevanceBuilder-param-termLocations"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../json_text_search/TermLocation-class.html">TermLocation</a></span>&gt;</span></span> <span class="parameter-name">termLocations</span></span>)
+  <span class="name"><a href="../json_text_search/JsonIndexBuilder/kDefaultRelevanceBuilder.html">kDefaultRelevanceBuilder</a></span><span class="signature">(<wbr><span class="parameter" id="kDefaultRelevanceBuilder-param-termLocations"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a class="deprecated" href="../json_text_search/TermLocation-class.html">TermLocation</a></span>&gt;</span></span> <span class="parameter-name">termLocations</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
   </span>
   
 
 </dt>
 <dd>
-  The default <a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a> for <a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a>.
+  The default <a class="deprecated" href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a> for <a class="deprecated" href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a>.
   
 
 </dd>
 
         <dt id="kDefaultTokenizer" class="callable">
   <span class="name"><a href="../json_text_search/JsonIndexBuilder/kDefaultTokenizer.html">kDefaultTokenizer</a></span><span class="signature">(<wbr><span class="parameter" id="kDefaultTokenizer-param-source"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">source</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a></span>&gt;</span></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a></span>&gt;</span></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  The default <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Tokenizer.html">Tokenizer</a> for <a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a>. Uses a <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/TextAnalyzer-class.html">TextAnalyzer</a> instance
+  The default <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Tokenizer.html">Tokenizer</a> for <a class="deprecated" href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a>. Uses a <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/TextAnalyzer-class.html">TextAnalyzer</a> instance
 with the defaults:
   
 
@@ -282,23 +300,23 @@ with the defaults:
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
   <li><a href="../index.html">json_text_search</a></li>
   <li><a href="../json_text_search/json_text_search-library.html">json_text_search</a></li>
-  <li class="self-crumb">JsonIndexBuilder abstract class</li>
+  <li class="self-crumb"><span class="deprecated">JsonIndexBuilder</span> abstract class</li>
 </ol>
 
 
     <h5>json_text_search library</h5>
     <ol>
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#classes">Classes</a></li>
-  <li><a href="../json_text_search/IIndexEntry-class.html">IIndexEntry</a></li>
-  <li><a href="../json_text_search/IIndexReference-class.html">IIndexReference</a></li>
-  <li><a href="../json_text_search/IndexEntry-class.html">IndexEntry</a></li>
-  <li><a href="../json_text_search/IndexReference-class.html">IndexReference</a></li>
-  <li><a href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></li>
-  <li><a href="../json_text_search/TermLocation-class.html">TermLocation</a></li>
+  <li><a class="deprecated" href="../json_text_search/IIndexEntry-class.html">IIndexEntry</a></li>
+  <li><a class="deprecated" href="../json_text_search/IIndexReference-class.html">IIndexReference</a></li>
+  <li><a class="deprecated" href="../json_text_search/IndexEntry-class.html">IndexEntry</a></li>
+  <li><a class="deprecated" href="../json_text_search/IndexReference-class.html">IndexReference</a></li>
+  <li><a class="deprecated" href="../json_text_search/JsonIndexBuilder-class.html">JsonIndexBuilder</a></li>
+  <li><a class="deprecated" href="../json_text_search/TermLocation-class.html">TermLocation</a></li>
 
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#extensions">Extensions</a></li>
-  <li><a href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
-  <li><a href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
+  <li><a class="deprecated" href="../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
+  <li><a class="deprecated" href="../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
 
 
 
@@ -306,10 +324,10 @@ with the defaults:
 
 
   <li class="section-title"><a href="../json_text_search/json_text_search-library.html#typedefs">Typedefs</a></li>
-  <li><a href="../json_text_search/FieldPriority.html">FieldPriority</a></li>
-  <li><a href="../json_text_search/IndexReferenceCollection.html">IndexReferenceCollection</a></li>
-  <li><a href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></li>
-  <li><a href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></li>
+  <li><a class="deprecated" href="../json_text_search/FieldPriority.html">FieldPriority</a></li>
+  <li><a class="deprecated" href="../json_text_search/IndexReferenceCollection.html">IndexReferenceCollection</a></li>
+  <li><a class="deprecated" href="../json_text_search/JsonTextIndex.html">JsonTextIndex</a></li>
+  <li><a class="deprecated" href="../json_text_search/RelevanceBuilder.html">RelevanceBuilder</a></li>
 
 </ol>
 
@@ -355,7 +373,7 @@ with the defaults:
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1-beta.1
+      0.0.1-beta.2
   </span>
 
   

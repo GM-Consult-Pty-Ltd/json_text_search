@@ -7,7 +7,7 @@ All rights reserved.
 ### 0.0.1-beta.2
 
 - **PRE-RELEASE, BREAKING CHANGES**
-- Initial pre-release version.
+- *BREAKING CHANGES*: Deprecated classes and type definitions.
 
 ### 0.0.1-beta.1
 

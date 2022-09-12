@@ -32,7 +32,7 @@
     <li><a href="../../index.html">json_text_search</a></li>
     <li><a href="../../json_text_search/json_text_search-library.html">json_text_search</a></li>
     <li><a href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
-    <li class="self-crumb">termRelevance property</li>
+    <li class="self-crumb"><span class="deprecated">termRelevance</span> property</li>
   </ol>
   <div class="self-name">termRelevance</div>
   <form class="search navbar-right" role="search">
@@ -55,14 +55,14 @@
 
 <section class="multi-line-signature">
   <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
-  <span class="name ">termRelevance</span>
-  
+  <span class="name deprecated">termRelevance</span>
+  <div class="features">@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39;Extension method [termRelevance] is no longer supported and will be &#39; &#39;removed with the next version.&#39;)</div>
 
 </section>
 
 
 <section class="desc markdown">
-  <p>Returns a calculated relevance value for <a href="../../json_text_search/TermLocation-class.html">TermLocation</a> instances for a
+  <p>Returns a calculated relevance value for <a class="deprecated" href="../../json_text_search/TermLocation-class.html">TermLocation</a> instances for a
 single term.</p>
 <p>Relevance is calculated using the following simple aggregationalgorithm:</p>
 <ul>
@@ -78,7 +78,10 @@ empty;</li>
 
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">double get termRelevance {
+  <pre class="language-dart"><code class="language-dart">@Deprecated(
+    &#39;Extension method [termRelevance] is no longer supported and will be &#39;
+    &#39;removed with the next version.&#39;)
+double get termRelevance {
   final terms = Set&lt;String&gt;.from(map((e) =&gt; e.term));
   &#47;&#47; - assert that the collection is for a single term and the term is not empty;
   assert(terms.length == 1, &#39;The collection must contain (only) one term.&#39;);
@@ -111,7 +114,7 @@ empty;</li>
   <li><a href="../../index.html">json_text_search</a></li>
   <li><a href="../../json_text_search/json_text_search-library.html">json_text_search</a></li>
   <li><a href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension.html">JsonTextIndexTermLocationCollectionExtension</a></li>
-  <li class="self-crumb">termRelevance property</li>
+  <li class="self-crumb"><span class="deprecated">termRelevance</span> property</li>
 </ol>
 
 
@@ -123,7 +126,7 @@ empty;</li>
 
     <li class="section-title"> <a href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension.html#instance-properties">Properties</a>
     </li>
-    <li><a href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension/termRelevance.html">termRelevance</a></li>
+    <li><a class="deprecated" href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension/termRelevance.html">termRelevance</a></li>
 
     <li class="section-title"><a href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension.html#instance-methods">Methods</a></li>
     <li><a href="../../json_text_search/JsonTextIndexTermLocationCollectionExtension/byTerm.html">byTerm</a></li>
@@ -143,7 +146,7 @@ empty;</li>
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1-beta.1
+      0.0.1-beta.2
   </span>
 
   

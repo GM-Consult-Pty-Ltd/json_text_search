@@ -52,7 +52,7 @@
     <section class="multi-line-signature">
       
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../json_text_search/JsonTextIndex.html">JsonTextIndex</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a class="deprecated" href="../../json_text_search/JsonTextIndex.html">JsonTextIndex</a></span>&gt;</span></span>
 <span class="name ">index</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="index-param-collection"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">collection</span></span></li>
 </ol>)
 
@@ -61,20 +61,20 @@
     </section>
     
 <section class="desc markdown">
-  <p>Returns a hashmap of term to <a href="../../json_text_search/IndexEntry-class.html">IndexEntry</a> from the <code>collection</code>,
+  <p>Returns a hashmap of term to <a class="deprecated" href="../../json_text_search/IndexEntry-class.html">IndexEntry</a> from the <code>collection</code>,
 a hashmap of primary key to JSON document used to create the index.</p>
 <p>The base class implementation builds the <a href="../../json_text_search/JsonIndexBuilder/index.html">index</a> as follows:</p>
 <ul>
 <li>create an empty <code>JsonTextIndex</code> to hold the return value;</li>
 <li>iterate through all JSON documents in <code>collection</code>; for each entry</li>
 <li>iterate through the <a href="../../json_text_search/JsonIndexBuilder/indexedFields.html">indexedFields</a>; for each field</li>
-<li>get <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a>s from source text in the field using <a href="../../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a>;</li>
-<li>map all <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a>s to <a href="../../json_text_search/TermLocation-class.html">TermLocation</a>s;</li>
-<li>when all <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a>s and <a href="../../json_text_search/TermLocation-class.html">TermLocation</a>s;</li>
+<li>get <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a>s from source text in the field using <a href="../../json_text_search/JsonIndexBuilder/tokenizer.html">tokenizer</a>;</li>
+<li>map all <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a>s to <a class="deprecated" href="../../json_text_search/TermLocation-class.html">TermLocation</a>s;</li>
+<li>when all <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a>s and <a class="deprecated" href="../../json_text_search/TermLocation-class.html">TermLocation</a>s;</li>
 <li>calculate the relevance of the JSON document for every term in its
 tokens;</li>
-<li>create a <a href="../../json_text_search/IndexReference-class.html">IndexReference</a> for the JSON document; and</li>
-<li>create or update the <a href="../../json_text_search/IndexEntry-class.html">IndexEntry</a> for the term and add it to the
+<li>create a <a class="deprecated" href="../../json_text_search/IndexReference-class.html">IndexReference</a> for the JSON document; and</li>
+<li>create or update the <a class="deprecated" href="../../json_text_search/IndexEntry-class.html">IndexEntry</a> for the term and add it to the
 return value.</li>
 </ul>
 <p>Override the <a href="../../json_text_search/JsonIndexBuilder/index.html">index</a> method for custom indexing.</p>
@@ -184,7 +184,7 @@ return value.</li>
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1-beta.1
+      0.0.1-beta.2
   </span>
 
   

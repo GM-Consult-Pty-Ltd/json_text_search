@@ -32,7 +32,7 @@
     <li><a href="../../index.html">json_text_search</a></li>
     <li><a href="../../json_text_search/json_text_search-library.html">json_text_search</a></li>
     <li><a href="../../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
-    <li class="self-crumb">locations method</li>
+    <li class="self-crumb"><span class="deprecated">locations</span> method</li>
   </ol>
   <div class="self-name">locations</div>
   <form class="search navbar-right" role="search">
@@ -51,19 +51,24 @@
 
     <section class="multi-line-signature">
       
+<div>
+  <ol class="annotation-list">
+    <li>@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39; Extension method [locations] is no longer supported and will be &#39; &#39;removed with the next version&#39;)</li>
+  </ol>
+</div>
 
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../json_text_search/TermLocation-class.html">TermLocation</a></span>&gt;</span></span>
-<span class="name ">locations</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="locations-param-term"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">term</span>, </span></li>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a class="deprecated" href="../../json_text_search/TermLocation-class.html">TermLocation</a></span>&gt;</span></span>
+<span class="name deprecated">locations</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="locations-param-term"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">term</span>, </span></li>
 <li><span class="parameter" id="locations-param-fieldName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">fieldName</span>, </span></li>
 <li><span class="parameter" id="locations-param-fieldPriority"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">fieldPriority</span></span></li>
 </ol>)
 
-      
+      <div class="features">@<a href="https://api.flutter.dev/flutter/dart-core/Deprecated-class.html">Deprecated</a>(&#39; Extension method [locations] is no longer supported and will be &#39; &#39;removed with the next version&#39;)</div>
 
     </section>
     
 <section class="desc markdown">
-  <p>Returns a list of <code>TermLocation</code> from the <a href="https://pub.dev/documentation/text_analysis/0.0.12/text_analysis/Token-class.html">Token</a> collection, ordered by
+  <p>Returns a list of <code>TermLocation</code> from the <a href="https://pub.dev/documentation/text_analysis/1.0.0+1/text_analysis/Token-class.html">Token</a> collection, ordered by
 <a href="../../json_text_search/TermLocation/position.html">TermLocation.position</a>.</p>
 <p>Filters the collection for <code>term</code>, then maps the filtered collection to
 a list of <code>TermLocation</code>.</p>
@@ -73,7 +78,10 @@ a list of <code>TermLocation</code>.</p>
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">List&lt;TermLocation&gt; locations(
+  <pre class="language-dart"><code class="language-dart">@Deprecated(
+    &#39; Extension method [locations] is no longer supported and will be &#39;
+    &#39;removed with the next version&#39;)
+List&lt;TermLocation&gt; locations(
         String term, String fieldName, int fieldPriority) =&gt;
     byTerm(term)
         .map((e) =&gt; TermLocation(term, fieldName, fieldPriority, e.position))
@@ -94,7 +102,7 @@ a list of <code>TermLocation</code>.</p>
   <li><a href="../../index.html">json_text_search</a></li>
   <li><a href="../../json_text_search/json_text_search-library.html">json_text_search</a></li>
   <li><a href="../../json_text_search/JsonTextIndexTokenCollectionExtension.html">JsonTextIndexTokenCollectionExtension</a></li>
-  <li class="self-crumb">locations method</li>
+  <li class="self-crumb"><span class="deprecated">locations</span> method</li>
 </ol>
 
 
@@ -106,7 +114,7 @@ a list of <code>TermLocation</code>.</p>
 
 
     <li class="section-title"><a href="../../json_text_search/JsonTextIndexTokenCollectionExtension.html#instance-methods">Methods</a></li>
-    <li><a href="../../json_text_search/JsonTextIndexTokenCollectionExtension/locations.html">locations</a></li>
+    <li><a class="deprecated" href="../../json_text_search/JsonTextIndexTokenCollectionExtension/locations.html">locations</a></li>
 
 
 
@@ -123,7 +131,7 @@ a list of <code>TermLocation</code>.</p>
 <footer>
   <span class="no-break">
     json_text_search
-      0.0.1-beta.1
+      0.0.1-beta.2
   </span>
 
   
