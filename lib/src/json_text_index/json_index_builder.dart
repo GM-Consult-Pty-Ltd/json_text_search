@@ -5,8 +5,7 @@
 // ignore_for_file: deprecated_member_use_from_same_package
 
 import 'package:json_text_search/json_text_search.dart';
-import 'package:text_analysis/text_analysis.dart';
-import 'package:porter_2_stemmer/porter_2_stemmer.dart';
+import 'package:text_indexing/text_indexing.dart';
 
 /// Provides indexing methods for a collection of JSON documents.
 /// - [tokenizer] returns a collection of [Token]s from a text source;

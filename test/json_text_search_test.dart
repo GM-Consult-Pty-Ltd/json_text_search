@@ -3,7 +3,7 @@
 import 'package:json_text_search/json_text_search.dart';
 import 'package:json_text_search/src/json_text_index/json_index_builder.dart';
 import 'package:test/test.dart';
-import 'package:text_analysis/text_analysis.dart';
+import 'package:text_indexing/text_indexing.dart';
 import 'data/sample_news_subset.dart';
 
 void main() {
